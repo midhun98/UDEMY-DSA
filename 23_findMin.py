@@ -4,9 +4,9 @@ def findMin(nums):
         mid = (left + right) // 2
         if nums[mid] > nums[right]:
             left = mid + 1
-        else:
+        elif nums[mid] < nums[right]:
             right = mid
-    return nums[mid]
+    return nums[left]
 
-nums = [14, 15, 16, 17, 10, 11, 12] 
+nums = [11] 
 print(findMin(nums))
